@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GLRP - Home</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="row logo">
+            <img src="/logo.png" alt="GLRP Logo" class="logo">
+        </div>
+        <div class="row desc">
+            <div>The first student-led journal at Goldsmiths University dedicated to Law, Politics and Social Sciences.</div>
+        </div>
+        <div class="row arrow">
+            <img src="/arrowDown.svg" width="50px">
+        </div>
+    </div>
+    <div class="articles">
+        <h1>Articles</h1>
+        <% articles.forEach(article => { %>
+            <div>
+                <a href="/article/<%= article.id %>"><%= article.name %></a>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
