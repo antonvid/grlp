@@ -25,8 +25,6 @@ module.exports = function(app) {
                     author: article.author
                 });
             });
-    
-            console.log(articles);
             // Render the articles list page, passing the articles array to the template
             res.render('index', { articles });
         });
