@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.article{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+}
+.article h1{
+    color: rgb(208, 171, 122);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 50px;
+    text-align: center;
+    padding: 50px
+}
+
+.author{
+    text-align: center;
+    font-style: italic;
+}
+
+@media (max-width: 768px){
+    .article h1{
+        font-size: 12vw;
+        padding: 0;
+        margin-bottom: 20%;
+    }
+}

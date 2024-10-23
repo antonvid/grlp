@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLRP - Home</title>
     <link rel="stylesheet" href="/main.css">
 </head>
@@ -20,9 +21,16 @@
     <div class="articles">
         <h1>Articles</h1>
         <% articles.forEach(article => { %>
-            <div>
-                <a href="/article/<%= article.id %>"><%= article.name %></a>
-            </div>
+            <a href="/article/<%= article.id %>">
+                    <div class="articleDiv">
+                        <div>
+                            <%= article.title %>
+                        </div>
+                        <div class="articleAuthor">
+                            <%= article.author %>
+                        </div>
+                    </div>
+            </a>
         <% }) %>
     </div>
 </body>

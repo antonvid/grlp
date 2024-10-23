@@ -1,10 +1,11 @@
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: #000000;
     color: #FFFFFF;
     margin: 0;
     padding: 0;
     font: 16px/1.5 sans-serif;
-    height: 100vh;
 }
 
 .header {
@@ -12,6 +13,7 @@ body {
     flex-flow: column;
     text-align: center;
     height: 100vh;
+    width: 100vw;
     /* background-color: red; */
 }
 
@@ -21,30 +23,71 @@ body {
 
 .header .row.desc {
     flex: 1 1 auto;
-    display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .header .row.desc div {
-    flex: 0 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header .row.arrow {
     flex: 0 1 40px;
 }
 
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a:hover{
+    color: #FFFFFF;
+}
+
 .articles {
-    padding: 200px;
+    padding: 20%;
 }
 
-.articles *{
-    margin: 0;
-    padding: 0;
+.articles h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.article {
-    background-color: rgb(139, 120, 77);
-    margin: 20px;
-    padding: 20px;
+.articleDiv{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(38, 38, 38);
+    border-radius: 10px;
+    transition: background-color 200ms;
+    cursor: pointer;
+}
+
+.articleDiv div{
+    display: inline;
+}
+
+.articleAuthor {
+    float: right;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.articleDiv:hover {
+    background-color: rgb(138, 122, 77);
+    transition: background-color 200ms;
+    text-decoration: underline;
+}
+
+/* For mobile phones: */
+@media (max-width: 768px) {
+    .header {
+        width: 100vw;
+    }
+    .logo {
+        max-width: 100vw;
+    }
+    .articles{
+        padding: 5%;
+    }
 }
